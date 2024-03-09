@@ -11,7 +11,23 @@
 //     document.getElementById('timer-display').innerHTML = duration;
 // }
 
-// startTimer(25:00, null);
+const timer = document.getElementById("timer-display");
+const start = document.getElementById("start-btn");
+const pause = document.getElementById("pause-btn");
+const reset = document.getElementById("reset-btn");
 
-let timeLeft = 25 * 60; // Initial time set to 25 minutes
-let timerInterval;
+function startTimer(){
+    console.log("start");
+}
+
+function pauseTimer(){
+    console.log("pause");
+}
+
+function resetTimer(){
+    console.log("reset");
+}
+
+start.addEventListener("click", startTimer);
+pause.addEventListener("click", pauseTimer);
+reset.addEventListener("click", resetTimer);
