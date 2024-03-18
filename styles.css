@@ -13,7 +13,8 @@ body {
 }
 
 #timer-display  {
-    font-size: 4rem;
+    font-size: 7rem;
+    margin-bottom: 8px;
 }
 
 button {
@@ -21,4 +22,17 @@ button {
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
+    text-transform: uppercase;
+}
+
+#start-btn {
+    background-color: green;
+}
+
+#pause-btn {
+    background-color: red;
+}
+
+#reset-btn {
+    background-color: grey;
 }
