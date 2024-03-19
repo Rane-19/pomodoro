@@ -11,7 +11,7 @@
 //     document.getElementById('timer-display').innerHTML = duration;
 // }
 
-const timer = document.getElementById("timer-display");
+const timerEl = document.getElementById("timer-display");
 const start = document.getElementById("start-btn");
 const pause = document.getElementById("pause-btn");
 const reset = document.getElementById("reset-btn");
@@ -25,11 +25,12 @@ function updateTimer(){
     let formattedTime = minutes + ":" + seconds;
 
 
-    timer.innerHTML = formattedTime
+    timerEl.innerHTML = formattedTime
 }
 
 function startTimer(){
     interval = setInterval(()=>{
+        timeLeft--;
         updateTimer();
     }, 1000
     )
