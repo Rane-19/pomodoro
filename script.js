@@ -16,8 +16,23 @@ const start = document.getElementById("start-btn");
 const pause = document.getElementById("pause-btn");
 const reset = document.getElementById("reset-btn");
 
+let interval
+let timeLeft = 1500;
+
+function updateTimer(){
+    let minutes = Math.floor(timeLeft / 60)
+    let seconds = timeLeft % 60
+    let formattedTime = minutes + ":" + seconds;
+
+
+    timer.innerHTML = formattedTime
+}
+
 function startTimer(){
-    console.log("start");
+    interval = setInterval(()=>{
+        updateTimer();
+    }, 1000
+    )
 }
 
 function pauseTimer(){
