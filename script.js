@@ -33,18 +33,23 @@ function startTimer(){
         timeLeft--;
         updateTimer();
         if(timeLeft === 0){
-            alert("TIME'S UP!")
+            clearInterval(interval);
+            alert("TIME'S UP!");
+            timeLeft = 1500;
+            updateTimer();
         }
     }, 1000
     )
 }
 
 function pauseTimer(){
-    console.log("pause");
+    clearInterval(interval);
 }
 
 function resetTimer(){
-    console.log("reset");
+    clearInterval(interval);
+    timeLeft = 1500;
+    updateTimer();
 }
 
 start.addEventListener("click", startTimer);
